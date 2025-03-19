@@ -1,0 +1,21 @@
+{
+  "name": "Biblioteca de Arte Musical Tultepec ",
+  "short_name": "BAMT",
+  "description": "Una aplicación para explorar partituras musicales",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#B0005E",
+  "icons": [
+    {
+      "src": "/icons/bamt192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/bamt512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
