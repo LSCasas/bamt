@@ -39,6 +39,36 @@ const libros = [
     autor: "George Gershwin",
     categoria: "Ensamble de Jazz",
   },
+  {
+    id: 7,
+    titulo: "Concierto para Piano No. 1",
+    autor: "Pyotr Ilyich Tchaikovsky",
+    categoria: "Cuerdas",
+  },
+  {
+    id: 8,
+    titulo: "Obertura 1812",
+    autor: "Pyotr Ilyich Tchaikovsky",
+    categoria: "Metales",
+  },
+  {
+    id: 9,
+    titulo: "Requiem",
+    autor: "Wolfgang Amadeus Mozart",
+    categoria: "Coros",
+  },
+  {
+    id: 10,
+    titulo: "Concierto para Violín",
+    autor: "Johannes Brahms",
+    categoria: "Cuerdas",
+  },
+  {
+    id: 11,
+    titulo: "Sinfonía No. 9",
+    autor: "Ludwig van Beethoven",
+    categoria: "Coros",
+  },
 ];
 
 export default function BibliotecaPage() {
@@ -62,23 +92,23 @@ export default function BibliotecaPage() {
       <Sidebar />
       <div className="flex-1 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-6 py-6">
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex justify-between items-center mb-4 md:mt-0 mt-10">
             <h1 className="md:text-2xl text-xl font-bold text-[#6C0036]">
               Biblioteca Digital de Partituras
             </h1>
             <div className="space-x-4">
               <Link href="/formularioDePartitura">
-                <button className="bg-green-600 text-white px-4 py-2 rounded">
+                <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800">
                   Crear
                 </button>
               </Link>
-              <button className="bg-red-600 text-white px-4 py-2 rounded">
+              <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-800">
                 Cerrar sesión
               </button>
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 p-4 bg-gray-100 rounded-md text-black mt-5">
+          <div className="flex flex-wrap gap-4 p-4 bg-gray-100 rounded-md text-black mt-5 mb-5">
             <input
               type="text"
               placeholder="Buscar una pieza..."
@@ -92,7 +122,7 @@ export default function BibliotecaPage() {
             </select>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-auto h-[72vh]">
             {librosFiltrados.map((libro) => (
               <div key={libro.id} className="bg-white p-4 rounded-lg shadow">
                 <h2 className="text-lg font-bold text-gray-700">
@@ -108,13 +138,13 @@ export default function BibliotecaPage() {
                 </Link>
                 <div className="mt-4 flex justify-between">
                   <Link href={`/formularioDePartitura?id=${libro.id}`}>
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded">
+                    <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
                       Editar
                     </button>
                   </Link>
                   <button
                     onClick={() => handleEliminar(libro.id)}
-                    className="bg-red-500 text-white px-4 py-2 rounded"
+                    className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700"
                   >
                     Eliminar
                   </button>

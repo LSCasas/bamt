@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
-
+import Link from "next/link";
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -113,8 +113,13 @@ const Sidebar = () => {
 const SidebarContent = ({ searchTerm, setSearchTerm, filteredCategories }) => {
   return (
     <nav className="flex flex-col gap-4">
+      <Link href="/IniciarSesion">
+        <button className="text-black bg-white p-2 rounded-md mb-4  hover:bg-gray-300">
+          Iniciar sesión
+        </button>
+      </Link>
       <div>
-        <h2 className="text-xl font-bold text-white mb-4">Categorías</h2>
+        <h2 className="text-xl font-bold text-white ">Categorías</h2>
         <input
           type="text"
           placeholder="Buscar..."
