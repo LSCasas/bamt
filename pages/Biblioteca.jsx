@@ -53,9 +53,21 @@ export default function BibliotecaPage() {
       <Sidebar />
       <div className="flex-1 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-6 py-6">
-          <h1 className="md:text-2xl text-xl font-bold text-center mb-6 text-[#6C0036] md:mt-0 mt-10">
-            Biblioteca Digital de Partituras
-          </h1>
+          <div className="flex justify-between items-center mb-4">
+            <h1 className="md:text-2xl text-xl font-bold text-[#6C0036]">
+              Biblioteca Digital de Partituras
+            </h1>
+            <div className="space-x-4">
+              <Link href="/formularioDePartitura">
+                <button className="bg-green-600 text-white px-4 py-2 rounded">
+                  Crear
+                </button>
+              </Link>
+              <button className="bg-red-600 text-white px-4 py-2 rounded">
+                Cerrar sesión
+              </button>
+            </div>
+          </div>
           <input
             type="text"
             placeholder="Buscar una pieza..."

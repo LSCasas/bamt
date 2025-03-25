@@ -3,10 +3,14 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="es">
         <Head>
-          <link rel="manifest" href="/manifest.json" />
-          <meta name="theme-color" content="#B0005E" />
+          <link
+            rel="icon"
+            href="/icons/bamt512.png"
+            type="image/png"
+            sizes="512x512"
+          />
         </Head>
         <body>
           <Main />
