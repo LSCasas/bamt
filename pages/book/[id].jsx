@@ -64,26 +64,24 @@ export default function DetallePartitura() {
 
   const libro = libros.find((libro) => libro.id === parseInt(id));
 
-  if (!libro) return <div>Partitura no encontrada</div>;
+  if (!libro)
+    return (
+      <div className="text-center mt-10 text-xl">Partitura no encontrada</div>
+    );
 
   return (
-    <div className="min-h-screen bg-gray-50 p-8 flex flex-col items-center">
-      <div className="max-w-4xl w-full bg-white p-6 rounded-lg shadow-xl">
-        {/* Imagen de la partitura */}
-        <div className="flex justify-center mb-6">
-          <a
-            href={libro.imagen}
-            className="w-full md:w-2/3 h-auto rounded-lg shadow-lg"
-          >
+    <div className="min-h-screen bg-gray-50 p-2 flex flex-col items-center justify-center">
+      <div className="max-w-2xl w-full bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+        <div className="w-full flex justify-center mb-6">
+          <a href={libro.imagen} className="w-full max-w-md">
             <img
               src={libro.imagen}
               alt={libro.titulo}
-              className="w-full md:w-2/3 h-auto rounded-lg shadow-lg"
+              className="w-full h-auto rounded-lg shadow-lg"
             />
           </a>
         </div>
 
-        {/* Información de la partitura */}
         <h1 className="text-3xl font-bold text-gray-800 text-center">
           {libro.titulo}
         </h1>
@@ -92,13 +90,11 @@ export default function DetallePartitura() {
           {libro.categoria}
         </p>
 
-        {/* Descripción */}
-        <div className="mt-6 text-gray-700 text-lg">
+        <div className="mt-6 text-gray-700 text-lg text-center">
           <h2 className="text-2xl font-semibold mb-4">Descripción</h2>
           <p>{libro.descripcion}</p>
         </div>
 
-        {/* Botones de acción */}
         <div className="mt-6 flex justify-center gap-4">
           <button
             onClick={() => router.back()}
