@@ -5,11 +5,54 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const categories = [
-    "Cuerdas",
-    "Vientos",
-    "Metales",
-    "Percusión",
-    "Ensamble de Jazz",
+    "Violín",
+    "Viola",
+    "Violonchelo",
+    "Contrabajo",
+    "Arpa",
+
+    "Flauta",
+    "Piccolo",
+    "Oboe",
+    "Corno inglés",
+    "Clarinete",
+    "Clarinete bajo",
+    "Fagot",
+    "Contrafagot",
+
+    "Trompeta",
+    "Trompa",
+    "Trombón",
+    "Tuba",
+    "Eufonio",
+
+    "Saxofón soprano",
+    "Saxofón alto",
+    "Saxofón tenor",
+    "Saxofón barítono",
+
+    "Timbales",
+    "Caja",
+    "Bombo",
+    "Platillos",
+    "Xilófono",
+    "Vibráfono",
+    "Marimba",
+    "Triángulo",
+    "Campanas tubulares",
+    "Gong",
+    "Pandereta",
+    "Claves",
+    "Bongos",
+    "Congas",
+
+    "Piano",
+    "Celesta",
+    "Órgano",
+    "Clavicémbalo",
+
+    "Mandolina",
+    "Banjo",
   ];
 
   const filteredCategories = categories.filter((category) =>
@@ -41,7 +84,7 @@ const Sidebar = () => {
         <Menu size={24} />
       </button>
 
-      <div className="hidden md:flex md:w-64 h-screen bg-gradient-to-r from-[#B0005E] to-[#6C0036] p-4 absolute md:relative">
+      <div className="hidden md:flex md:w-64 h-screen bg-gradient-to-r from-[#B0005E] to-[#6C0036] p-4 absolute md:relative overflow-auto">
         <SidebarContent
           searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}

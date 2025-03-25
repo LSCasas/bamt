@@ -16,8 +16,63 @@ const SheetFormForm = () => {
           </div>
 
           <div>
-            <label className="block font-semibold text-black">Genero</label>
-            <input className="w-full p-2 border rounded text-black" />
+            <label className="block font-semibold text-black">Género</label>
+            <select className="w-full p-2 border rounded text-black">
+              {[
+                "Violín",
+                "Viola",
+                "Violonchelo",
+                "Contrabajo",
+                "Arpa",
+
+                "Flauta",
+                "Piccolo",
+                "Oboe",
+                "Corno inglés",
+                "Clarinete",
+                "Clarinete bajo",
+                "Fagot",
+                "Contrafagot",
+
+                "Trompeta",
+                "Trompa",
+                "Trombón",
+                "Tuba",
+                "Eufonio",
+
+                "Saxofón soprano",
+                "Saxofón alto",
+                "Saxofón tenor",
+                "Saxofón barítono",
+
+                "Timbales",
+                "Caja",
+                "Bombo",
+                "Platillos",
+                "Xilófono",
+                "Vibráfono",
+                "Marimba",
+                "Triángulo",
+                "Campanas tubulares",
+                "Gong",
+                "Pandereta",
+                "Claves",
+                "Bongos",
+                "Congas",
+
+                "Piano",
+                "Celesta",
+                "Órgano",
+                "Clavicémbalo",
+
+                "Mandolina",
+                "Banjo",
+              ].map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
           </div>
 
           <div>
