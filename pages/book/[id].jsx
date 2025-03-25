@@ -8,7 +8,8 @@ const libros = [
     categoria: "Cuerdas",
     descripcion:
       "Una de las composiciones más conocidas de Beethoven, famosa por su tema de apertura que simboliza la lucha y la victoria.",
-    imagen: "/partituras/1.jpg",
+    imagen:
+      "https://drive.google.com/file/d/1pLChlONE2ocFO-VG1GtwuqvCodl3El-e/view?usp=sharing",
   },
   {
     id: 2,

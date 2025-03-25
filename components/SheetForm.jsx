@@ -76,13 +76,6 @@ const SheetFormForm = () => {
           </div>
 
           <div>
-            <label className="block font-semibold text-black">
-              Descripcion (Opcional)
-            </label>
-            <input className="w-full p-2 border rounded text-black" />
-          </div>
-
-          <div>
             <label className="block font-semibold text-black">Imagen</label>
             <input className="w-full p-2 border rounded text-black" />
           </div>
