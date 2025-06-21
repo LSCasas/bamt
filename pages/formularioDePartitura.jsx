@@ -1,7 +1,7 @@
 import React from "react";
 import SheetForm from "@/components/SheetForm";
 
-export default function TeacherFormPage() {
+export default function SheetFormPage() {
   return (
     <div className="flex">
       <div className="flex-1 bg-gray-50 min-h-screen">

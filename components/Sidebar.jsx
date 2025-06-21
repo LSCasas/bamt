@@ -113,7 +113,7 @@ const Sidebar = () => {
 const SidebarContent = ({ searchTerm, setSearchTerm, filteredCategories }) => {
   return (
     <nav className="flex flex-col gap-4">
-      <Link href="/IniciarSesion">
+      <Link href="/InicioDeSesion">
         <button className="text-black bg-white p-2 rounded-md mb-4  hover:bg-gray-300">
           Iniciar sesión
         </button>

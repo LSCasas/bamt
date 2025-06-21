@@ -21,73 +21,25 @@ const libros = [
   },
   {
     id: 3,
-    titulo: "Eine kleine Nachtmusik",
-    autor: "Wolfgang Amadeus Mozart",
-    categoria: "Vientos",
+    titulo: "Sinfonía No. 5",
+    autor: "Ludwig van Beethoven",
+    categoria: "Cuerdas",
     imagen:
       "https://drive.google.com/file/d/1pLChlONE2ocFO-VG1GtwuqvCodl3El-e/view?usp=sharing",
   },
   {
     id: 4,
-    titulo: "Oda a la Alegría",
-    autor: "Ludwig van Beethoven",
-    categoria: "Metales",
-    imagen:
-      "https://drive.google.com/file/d/1pLChlONE2ocFO-VG1GtwuqvCodl3El-e/view?usp=sharing",
-  },
-  {
-    id: 5,
-    titulo: "El Cascanueces",
-    autor: "Pyotr Ilyich Tchaikovsky",
-    categoria: "Percusión",
-    imagen:
-      "https://drive.google.com/file/d/1pLChlONE2ocFO-VG1GtwuqvCodl3El-e/view?usp=sharing",
-  },
-  {
-    id: 6,
-    titulo: "Rapsodia en Azul",
-    autor: "George Gershwin",
-    categoria: "Ensamble de Jazz",
-    imagen:
-      "https://drive.google.com/file/d/1pLChlONE2ocFO-VG1GtwuqvCodl3El-e/view?usp=sharing",
-  },
-  {
-    id: 7,
-    titulo: "Concierto para Piano No. 1",
-    autor: "Pyotr Ilyich Tchaikovsky",
+    titulo: "Las Cuatro Estaciones",
+    autor: "Antonio Vivaldi",
     categoria: "Cuerdas",
     imagen:
       "https://drive.google.com/file/d/1pLChlONE2ocFO-VG1GtwuqvCodl3El-e/view?usp=sharing",
   },
   {
-    id: 8,
-    titulo: "Obertura 1812",
-    autor: "Pyotr Ilyich Tchaikovsky",
-    categoria: "Metales",
-    imagen:
-      "https://drive.google.com/file/d/1pLChlONE2ocFO-VG1GtwuqvCodl3El-e/view?usp=sharing",
-  },
-  {
-    id: 9,
-    titulo: "Requiem",
-    autor: "Wolfgang Amadeus Mozart",
-    categoria: "Coros",
-    imagen:
-      "https://drive.google.com/file/d/1pLChlONE2ocFO-VG1GtwuqvCodl3El-e/view?usp=sharing",
-  },
-  {
-    id: 10,
-    titulo: "Concierto para Violín",
-    autor: "Johannes Brahms",
+    id: 4,
+    titulo: "Las Cuatro Estaciones",
+    autor: "Antonio Vivaldi",
     categoria: "Cuerdas",
-    imagen:
-      "https://drive.google.com/file/d/1pLChlONE2ocFO-VG1GtwuqvCodl3El-e/view?usp=sharing",
-  },
-  {
-    id: 11,
-    titulo: "Sinfonía No. 9",
-    autor: "Ludwig van Beethoven",
-    categoria: "Coros",
     imagen:
       "https://drive.google.com/file/d/1pLChlONE2ocFO-VG1GtwuqvCodl3El-e/view?usp=sharing",
   },
@@ -153,7 +105,11 @@ export default function BibliotecaPage() {
                 <p className="text-gray-600">{libro.autor}</p>
                 <p className="text-sm text-gray-500">{libro.categoria}</p>
                 <Link
-                  href={`${libro.imagen}`}
+                  href={`https://drive.google.com/uc?export=view&id=${
+                    libro.imagen.split("/d/")[1].split("/")[0]
+                  }`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-[#B0005E] mt-2 inline-block"
                 >
                   Ver detalles

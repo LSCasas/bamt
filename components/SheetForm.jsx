@@ -1,6 +1,6 @@
 import React from "react";
 
-const SheetFormForm = () => {
+const SheetForm = () => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
       <div className="h-[70vh] overflow-y-auto p-2">
@@ -89,4 +89,4 @@ const SheetFormForm = () => {
   );
 };
 
-export default SheetFormForm;
+export default SheetForm;
